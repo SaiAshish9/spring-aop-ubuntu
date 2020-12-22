@@ -8,9 +8,18 @@ import org.springframework.stereotype.Component;
 @Component
 public class MyDemoLoggingAspect {
 
-	@Before("execution(public void addAccount())")
+	@Before("execution(public void com.springaop.aopdemo.dao.AccountDAO.add*())")
 	public void beforeAddAccountAdvice() {
 		System.out.println("@Before addAccount");
 	}
+
+//	(* add*())
+	
+//	(* addAccount(com.springaop.aopdemo.dao.Account))
+//	(* com.springaop.aopdemo.dao.*.*(..))
+//	any class any method of given package
+//	(* add*(com.springaop.aopdemo.Account))
+//	(* add*(com.springaop.aopdemo.Account,..))
 	
 }
+
