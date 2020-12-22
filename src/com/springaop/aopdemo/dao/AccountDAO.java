@@ -11,7 +11,7 @@ import com.springaop.aopdemo.Account;
 public class AccountDAO {
 
 	
-	public List<Account> findAccounts(){
+	public List<Account> findAccounts() throws Exception{
 		
 		List<Account> myAccounts = new ArrayList<>();
 		
@@ -22,7 +22,11 @@ public class AccountDAO {
 		myAccounts.add(temp1);
 		myAccounts.add(temp2);
 		myAccounts.add(temp3);
-
+        
+		boolean b = 1==1;
+		if(!b)
+		throw new Exception("error");
+		
 		return myAccounts;
 		
 	}
