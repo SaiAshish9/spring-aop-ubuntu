@@ -17,6 +17,10 @@ public class MyDemoLoggingAspect {
 		System.out.println("@Before addAccount");
 	}
 
+//	A() && B()
+//	!A()
+//	A() || B()
+	
 //	(* add*())
 	
 //	(* addAccount(com.springaop.aopdemo.dao.Account))
